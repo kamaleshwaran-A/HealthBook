@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, p {
+      color: #333;
+    }
+    .patient-details {
+      margin-bottom: 20px;
+    }
+    .patient-condition {
+      margin-bottom: 20px;
+    }
+    .tablet-details {
+      margin-bottom: 20px;
+    }
+    .bill-details {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Details</h1>
+    <div class="patient-details">
+      <p><strong>ID:</strong> <%= patient.id %></p>
+      <p><strong>Name:</strong> <%= patient.name %></p>
+      <p><strong>Age:</strong> <%= patient.age %></p>
+      <p><strong>Phone:</strong> <%= patient.phone %></p>
+    </div>
+    <div class="patient-condition">
+      <h2>Patient Condition</h2>
+      <p><%= patient.conditions %></p>
+    </div>
+    <div class="tablet-details">
+      <h2>Tablet Details</h2>
+      <img id="tablet-photo" src="/img/delsym.jpeg" alt="Tablet Photo" style="max-width: 200px;">
+      <p><strong>Tablet Name:</strong> Delsym</p>
+      <p><strong>Dosage:</strong></p>
+      <form action="https://www.drugs.com/dosage/delsym12-hour-cough-relief.html">
+        <button type="submit" class="btn btn-primary">Show</button>
+      </form>
+      <p><strong>Time:</strong> Morning</p>
+    </div>
+    <div class="bill-details">
+      <h2>Bill Details</h2>
+      <p><strong>Room rent:</strong> Rs.XX.XX</p>
+      <p><strong>Medicine cost:</strong> Rs.XX.XX</p>
+      <p><strong>Doctor fees:</strong> Rs.XX.XX</p>
+      <p><strong>Total Amount:</strong> Rs.XX.XX</p>
+      <p><strong>Payment Method:</strong> GooglePay</p>
+      <button id="printButton">Print Receipt</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for printing the receipt
+    document.getElementById("printButton").addEventListener("click", function() {
+      window.print();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Signup</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        function empty() {
+            var firstName = document.getElementById("first_name").value;
+            if (firstName == "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body style="background-image: url('https://th.bing.com/th/id/R.45b73cbdfedb0c6e4d50a8092355f9b3?rik=HOyUAzFZ7TFicA&riu=http%3a%2f%2fowh-inc.com%2fwp-content%2fuploads%2f2016%2f11%2f16F_room_view.jpg&ehk=VSKOnTnfY8dR5tNfCHyugwNfKgyMQeWS2AOHWqxGAfQ%3d&risl=1&pid=ImgRaw&r=0'); background-size: cover;">
+<div class="container-fluid py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 bg-light p-5 rounded">
+            <div class="text-center mb-4">
+                <img src="/img/logo.jpeg" alt="Hospital Logo" class="img-fluid" style="max-width: 200px;">
+            </div>
+            <h2 class="text-center mb-4">Sign Up</h2>
+            <form class="form-horizontal" role="form" method="post" action="/signup" onsubmit="return empty()">
+                <div class="form-group row">
+                    <label for="first_name" class="col-md-4 col-form-label">First Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="last_name" class="col-md-4 col-form-label">Last Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mob_no" class="col-md-4 col-form-label">Mobile Number</label>
+                    <div class="col-md-8">
+                        <input type="tel" class="form-control" id="mob_no" name="mob_no" placeholder="Mobile Number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="user_name" class="col-md-4 col-form-label">User Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="user_name" name="user_name" placeholder="User Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-md-4 col-form-label">Password</label>
+                    <div class="col-md-8">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-8 offset-md-4">
+                        <button id="btn-signup" type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> Sign Up</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-8 offset-md-4">
+                        <span id="form-message" class="text-danger"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

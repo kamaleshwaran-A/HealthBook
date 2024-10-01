@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Appointment details</h1>
+    <table class='table table-striped'>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Condition</th>
+            <th>Address</th>
+            <th>Appointment</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <% results.forEach(item => { %>
+            <tr>
+                <td><%= item.name %></td>
+                <td><%= item.age %></td>
+                <td><%= item.conditions %></td>
+                <td><%= item.address %></td>
+                <td><%= item.appointment %>
+                    <form  action="/reschedule-appointment"  method="POST">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <input type="datetime-local" class="form-control" id="appointment" name="appointment" required>
+                        <button type="submit" class="btn btn-primary">reschedule</button>
+                    </form>
+                </td>
+                <td><%= item.phone %></td>
+                <td><%= item.status %></td>
+                <td>
+                    <form  action="/accept-appointment"  method="POST">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <button type="submit" class="btn btn-primary">Accept</button>
+                    </form>
+                    <br>
+                    <form  action="/remove-user"  method="POST">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <button type="submit" class="btn btn-info">Completed</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+    <div id="appointmentStatus"></div>
+</div>
+</body>
+</html>
