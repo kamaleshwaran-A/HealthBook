@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <style>
+        body {
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+        }
+        .login-form {
+            padding: 30px;
+            flex: 1;
+        }
+        .panel-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .form-control {
+            border-radius: 0.375rem;
+        }
+        .btn-success {
+            border-radius: 0.375rem;
+        }
+        .control a {
+            color: #007bff;
+        }
+        .login-image {
+            width: 200%;
+            height: 200%;
+            object-fit: cover;
+            flex: 1;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="login-form">
+        <div class="text-center mb-4">
+            <img src="/img/logo.jpeg" alt="Logo" class="logo img-fluid">
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading text-center">
+                <div class="panel-title">Sign In</div>
+            </div>
+            <div class="panel-body" style="padding-top:30px">
+                <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
+                    <div class="form-group">
+                        <label for="login-username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="user_name" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="d-grid">
+                            <button id="btn-login" type="submit" class="btn btn-success btn-lg">Login</button>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="control">
+                            <div style="border-top: 1px solid #888; padding-top:15px; font-size:85%">
+                                Don't have an account?
+                                <a href="/signup">Sign Up Here</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="login-image">
+        <img src="/img/hospital.jpeg" alt="Hospital Image" class="img-fluid" width="420 px" height="430 px">
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
