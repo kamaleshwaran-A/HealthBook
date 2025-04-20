@@ -1,71 +1,80 @@
-# Hospital Management System
+## 🏥HealthBook
+## ✨ Overview
+The HealthBook is a full-stack web application designed to simplify and streamline hospital operations. It manages everything from patient registration and appointments to staff details, billing, and medical records. Built with Node.js and PostgreSQL, this system enhances hospital efficiency with a clean and intuitive interface.
 
-## Overview
+## 🚀 Key Features
+📝 Patient Registration & Management – Add, update, and manage patient details.
 
-The Hospital Management System is designed to manage the operations of a hospital, including patient records, appointments, staff management, and billing. This system aims to streamline the administrative tasks and improve the efficiency of hospital operations.
+📅 Appointment Scheduling – Book and manage appointments with doctors.
 
-## Features
+👨‍⚕️ Staff Management – Manage doctors, nurses, and administrative staff.
 
-- Patient Registration and Management
-- Appointment Scheduling
-- Staff Management
-- Billing and Invoicing
-- Medical Records Management
-- Reporting and Analytics
+💳 Billing & Invoicing – Automate the billing process with proper invoicing.
 
-## Technologies Used
+🧾 Medical Records – Upload and manage patient files and reports.
 
-- Frontend: HTML, CSS, EJS
-- Backend: Node.js, Express
-- Database: PostgreSQL
-- Other: Multer for file uploads
+📊 Reports & Analytics – View system-wide summaries and insights.
 
-## Installation
+## 🛠️ Tech Stack
+🎨 Frontend: HTML, CSS, EJS (Templating)
 
-To set up the project locally, follow these steps:
+🖥️ Backend: Node.js, Express.js
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/ikjasrasool/hospital_management.git
-    cd hospital_management/hospital
-    ```
+🗃️ Database: PostgreSQL
 
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
 
-3. Set up the database:
-    ```bash
-    # Ensure PostgreSQL is installed and running
-    # Create a database named 'hospital'
-    # Update the database configuration in app.js if necessary
-    ```
 
-4. Start the development server:
-    ```bash
-    npm start
-    ```
+## ⚙️ Installation & Setup
+1️⃣ Clone the Repository
+``` sh
+git clone https://github.com/kamaleshwaran-A/Hospital-Management-System.git
+cd hospital_management/hospital
+```
 
-## Usage
+2️⃣ Install Dependencies
+``` sh
+npm install
+```
+3️⃣ Set Up the Database
+```sh
+# Make sure PostgreSQL is installed and running
+# Create a database named 'hospital'
+# Update DB credentials in app.js if necessary
+```
+4️⃣ Start the Server
+``` sh
+npm start
+```
+🧪 Usage
+Open your browser and go to:
+``` sh
+http://localhost:4044
+```
+## 🤝 Contributing
+We 💙 contributions!
+To contribute:
 
-1. Open your browser and navigate to `http://localhost:4044` for the application.
-2. Use the provided credentials to log in and start using the system.
+Fork the repository
 
-## Contributing
+Create your branch:
+```
+git checkout -b feature/your-feature-name
+```
 
-We welcome contributions to improve the Hospital Management System. To contribute, follow these steps:
+Commit your changes:
+```
+git commit -m "Add feature"
+```
 
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a pull request.
+Push to GitHub:
+```
+git push origin feature/your-feature-name
+```
 
-## License
+Open a Pull Request
+📬 Contact
+For queries, suggestions, or collaboration opportunities, feel free to contact:
+📧 Email:kamaleshathappan@gmail.com
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For any questions or suggestions, please contact [your email address].
