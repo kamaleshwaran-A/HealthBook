@@ -75,6 +75,3 @@ Open a Pull Request
 📬 Contact
 For queries, suggestions, or collaboration opportunities, feel free to contact:
 📧 Email:kamaleshathappan@gmail.com
-
-
-
